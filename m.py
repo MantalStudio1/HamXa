@@ -579,7 +579,7 @@ def crack(idf,pwv):
 								hit1+=1
 								infoakun += (f"		[{hit1}] {muncul} {ditambahkan[hit2]}\n")
 								hit2+=1
-						    if "You dont have an expired app or website for review" in cek2:
+						 if "You dont have an expired app or website for review" in cek2:
 							infoakun += (f"\nNo Expired Apps Associated\n")
 						else:
 							hit1,hit2=1,1
