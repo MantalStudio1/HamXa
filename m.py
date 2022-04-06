@@ -10,7 +10,7 @@ except ImportError:
 	try:
 		import rich
 	except ImportError:
-		exit('Tidak Dapat Menginstall Module rich, Coba Install Manual (pip install rich)')
+		exit('Cant Install Rich Module, Try Manual Install (pip install rich)')
 from rich.table import Table as me
 from rich.console import Console as sol
 from bs4 import BeautifulSoup as sop
@@ -28,9 +28,6 @@ except:ugen2 = ['Mozilla/5.0 (Linux; U; Android 2.3.4; pt-pt; SonyEricssonLT18a 
 
 # INDICATION
 id,id2,loop,ok,cp,akun,oprek,method,lisensiku,taplikasi,tokenku,uid,lisensikuni= [],[],0,0,0,[],[],[],[],[],[],[],[]
-### JAM & HARI ###
-____jamwaktu____ = time.strftime("%H:%M:%S")
-____dayharii____ = time.strftime("%d/%m/%Y")
 # COLORS
 x = '\33[m' # DEFAULT
 k = '\033[93m' # KUNING +
@@ -54,18 +51,27 @@ def clear():
 # BACK
 def back():
 	login()
-	### LOGOO TOOLS ###
-def _____logo_____():
-    ____irpanrunning____(f""" \n{P}                 {____dayharii____}  \n{P}   ╭─────────{___M_K_H___}{P}  {____jamwaktu____}  {___H_K_M___}{P}─────────╮\n{P}   │  © _____________________________   │\n{P}   │   /  _____/\______   \_   _____/   │\n{P}   │  /   \  ___ |    |  _/|    __)     │\n{P}   │  \    \_\  \|    |   \|     \      │\n{P}   │   \______  /|______  /\___  /      │\n{P}   │          \/        \/     \/       │\n{P}   ╰───────────┬────────────┬───────────╯""")
 # BANNER
 def banner():
 	clear()
-	wel = '# WELCOME TO FACEBOOK WORLD TOOLS 2022'
-	wel2 = mark(wel, style='cyan')
-	sol().print(wel2)
-	au='AUTHOR    :  Ahmed Alzwage \nGITHUB    :  https://github.com/Libya.pro\nWHATSAPP  :  0921762445'
-	pengembang1=nel(au,style="cyan")
-	cetak(nel(pengembang1, title='INFORMASI PENGEMBANG'))
+	wel = '# WELCOME TO FACEBOOK ClONING TOOLS '
+	wel2 = mark(wel, style='cyan')                                       
+	sol().print(wel2, style='on Green')
+	ise = '# DEVELOPER INFORMATION' 
+	fc = mark(ise, style='green')
+	sol().print(fc)
+	tap = me()
+	tap.add_column('200', style='green', justify='center')
+	tap.add_row('Kindly Send Your Token To Whatsapp')
+	sol().print(tap, justify='center')
+	tap = me()
+	tap.add_column('WHATSAPP', style='green', justify='center')
+	tap.add_column('GITHUB', style='green', justify='center')
+	tap.add_column('FACEBOOK ', style='green', justify='center')
+	tap.add_column('INSTAGRAM', style='green', justify='center')
+	tap.add_row('03011517172')
+	sol().print(tap, justify='center')
+
 
 # VALIDASI TOKEN
 def login():
@@ -82,7 +88,7 @@ def login():
 				login_lagi()
 			except requests.exceptions.ConnectionError:
 				banner()
-				li = '# KONEKSI INTERNET BERMASALAH, PERIKSA & COBA LAGI'
+				li = '# PROBLEM INTERNET CONNECTION, CHECK AND TRY AGAIN'
 				lo = mark(li, style='red')
 				sol().print(lo, style='cyan')
 				exit()
@@ -92,27 +98,30 @@ def login():
 # LOGIN
 def login_lagi():
 	banner()
-	sky = '# LOGIN MENGGUNAKAN AKSES TOKEN'
+	sky = '# LOGIN USING THE ACCESS TOKEN'
 	sky2 = mark(sky, style='green')
 	sol().print(sky2, style='cyan')
-	panda = input(x+'['+p+'f'+x+'] Token : ')
+	panda = input(x+'['+p+'⭐'+x+'] Token : ')
 	akun=open('.token.txt','w').write(panda)
 	try:
 		tes = requests.get('https://graph.facebook.com/me?access_token='+panda)
+		tes2 = json.loads(tes.text)['name']
 		tes3 = json.loads(tes.text)['id']
-		sue = '# Login Sukses, Tunggu Sebentar!'
+		tes4 = json.loads(tes.text)['birthday']
+		open('token.txt','w').write(panda)
+		sue = '# Login Success, Wait A Moment! LOADING....'
 		suu = mark(sue, style='green')
 		sol().print(suu, style='cyan')
-		time.sleep(2.5)
+		time.sleep(1.5)
 		login()
 	except KeyError:
-		sue = '# Login Gagal, Periksa Token Anda!'
+		sue = '# Login Failed, Check Your Token!!'
 		suu = mark(sue, style='red')
 		sol().print(suu, style='cyan')
 		time.sleep(2.5)
 		login_lagi()
 	except requests.exceptions.ConnectionError:
-		li = '# KONEKSI INTERNET BERMASALAH, PERIKSA & COBA LAGI'
+		li = '# PROBLEM INTERNET CONNECTION, CHECK AND TRY AGAIN'
 		lo = mark(li, style='red')
 		sol().print(lo, style='cyan')
 		exit()
@@ -130,16 +139,14 @@ def menu(my_name,my_id,my_birthday):
 	sg = '# MENU TOOLS'
 	fx = mark(sg, style='green')
 	sol().print(fx)
-	print(x+'['+h+'•'+x+']{____dayharii____} : '+str(my_name))
-	print(x+'['+h+'•'+x+'] User Id     : '+str(my_id))
-	print(x+'['+h+'•'+x+'] Active User : '+str(my_name))
-	print(x+'['+h+'•'+x+'] User Id     : '+str(my_id))
-	print(x+'['+h+'•'+x+'] User Ttl    : '+str(birth))
-	print(x+'['+h+'•'+x+'] Ip Address  : '+str(sh['origin']))
-	io = '[01] Crack Dari Pertemanan Publik\n[02] Crack Dari Pertemanan Publik (Massal)\n[03] Cek Result Crack\n[04] Cek Opsi Checkpoint\n[00] Log Out'
-	oi = nel(io, style='cyan')
+	print(x+'['+h+'<•MHI•>'+k+'] ıllıllı⭐🌟 I͙D͙ N͙A͙M͙E͙   🌟⭐ıllıllı : '+str(my_name))
+	print(x+'['+h+'<•MHI•>'+k+'] ıllıllı⭐🌟 L͙O͙G͙I͙N͙ I͙D͙  🌟⭐ıllıllı : '+str(my_id))
+	print(x+'['+h+'<•MHI•>'+k+'] ıllıllı⭐🌟 D͙A͙T͙E͙ B͙O͙T͙H͙ 🌟⭐ıllıllı : '+str(birth))
+	print(x+'['+h+'<•MHI•>'+k+'] ıllıllı⭐🌟 I͙P͙ A͙D͙R͙E͙S͙S͙ 🌟⭐ıllıllı : '+str(sh['origin']))
+	io = '[01] 🌟⭐ʜᴀᴄᴋʀᴅ ꜰʀᴏᴍ ꜰɪʀᴇɴᴅ🌟⭐ \n[02] 🌟⭐ʜᴀᴄᴋʀᴅ ꜰʀᴏᴍ ꜰɪʀᴇɴᴅ🌟⭐(ꜰʀᴏᴍ MULTIPULE ɪᴅ)\n[03] 🌟⭐ꜱʜᴏᴡ ʜᴀᴄᴋᴇᴅ ɪᴅᴢ🌟⭐\n[00] 🌟⭐ʟᴏɢ ᴏᴜᴛ🌟⭐'
+	oi = nel(io, style='PURPLE')
 	cetak(nel(oi, title='MENU'))
-	jh = input(x+'['+p+'<>'+x+'] Pilih : ')
+	jh = input(x+'['+p+'⭐'+k+'] SELECT ONE : ')
 	if jh in ['1','01']:
 		dump_publik()
 	elif jh in ['2','02']:
@@ -152,36 +159,36 @@ def menu(my_name,my_id,my_birthday):
 		os.system('rm -rf .token.txt')
 		print(x+'['+h+'•'+x+'] Wait ...')
 		time.sleep(1)
-		sw = '# BERHASIL LOG OUT'
+		sw = '# LOGOUT SUCCESSFULLY'
 		sol().print(mark(sw, style='green'))
 		exit()
 	else:
-		ric = '# PILIHAN TIDAK ADA DI MENU'
+		ric = '# OPTION NOT IN THE MENU'
 		sol().print(mark(ric, style='red'))
 		exit()
 
 # RESULT CHECKER
 def result():
-	cek = '# CEK RESULT CRACK'
+	cek = '# ChecK RESULT'
 	sol().print(mark(cek, style='green'))
-	kayes = '[01] Cek Hasil Cp\n[02] Cek Hasil Ok\n[00] Kembali Ke Menu'
-	kis = nel(kayes, style='cyan')
-	cetak(nel(kis, title='RESULTS'))
-	kz = input(x+'['+p+'f'+x+'] Pilih : ')
+	kayes = '[01] ᴄʜᴇᴄᴋ ʜᴀᴄᴋʀᴅ ᴄᴘ\n[02] ᴄʜᴇᴄᴋ ʜᴀᴄᴋʀᴅ OK\n[00] ʙᴀᴄᴋ ᴛᴏ ᴍᴇɴᴜ'
+	kis = nel(kayes, style='green')
+	cetak(nel(kis, title='ʜᴀᴄᴋʀᴅ'))
+	kz = input(x+'['+p+'⭐'+x+'] Select : ')
 	if kz in ['1','01']:
 		try:vin = os.listdir('CP')
 		except FileNotFoundError:
-			gada = '# DIREKTORI TIDAK DITEMUKAN'
+			gada = '# DIRECTORY NOT FOUND'
 			sol().print(mark(gada, style='red'))
 			time.sleep(2)
 			back()
 		if len(vin)==0:
-			haha = '# ANDA BELUM MEMILIKI RESULT CP'
+			haha = '# YOU DONT HAVE RESULT CP'
 			sol().print(mark(haha, style='yellow'))
 			time.sleep(2)
 			back()
 		else:
-			gerr = '# HASIL CP ANDA'
+			gerr = '# YOUR CP RESULT'
 			sol().print(mark(gerr, style='green'))
 			cih = 0
 			lol = {}
@@ -193,11 +200,11 @@ def result():
 					nom = '0'+str(cih)
 					lol.update({str(cih):str(isi)})
 					lol.update({nom:str(isi)})
-					print('['+nom+'] '+isi+' ---> '+str(len(hem))+' Akun'+x)
+					print('['+nom+'] '+isi+' ➳ '+str(len(hem))+' Account'+x)
 				else:
 					lol.update({str(cih):str(isi)})
-					print('['+str(cih)+'] '+isi+' ---> '+str(len(hem))+' Akun'+x)
-			gerr2 = '# PILIH RESULT UNTUK DITAMPILKAN'
+					print('['+str(cih)+'] '+isi+' ➳ '+str(len(hem))+'Account'+x)
+			gerr2 = '# SELECT RESULTS TO DISPLAY'
 			sol().print(mark(gerr2, style='green'))
 			geeh = input(x+'['+p+'f'+x+'] Pilih : ')
 			try:geh = lol[geeh]
@@ -243,10 +250,10 @@ def result():
 					nom = '0'+str(cih)
 					lol.update({str(cih):str(isi)})
 					lol.update({nom:str(isi)})
-					print('['+nom+'] '+isi+' ---> '+str(len(hem))+' Akun'+x)
+					print('['+nom+'] '+isi+' ➳ '+str(len(hem))+' Akun'+x)
 				else:
 					lol.update({str(cih):str(isi)})
-					print('['+str(cih)+'] '+isi+' ---> '+str(len(hem))+' Akun'+x)
+					print('['+str(cih)+'] '+isi+' ➳ '+str(len(hem))+' Akun'+x)
 			gerr2 = '# PILIH RESULT UNTUK DITAMPILKAN'
 			sol().print(mark(gerr2, style='green'))
 			geeh = input(x+'['+p+'f'+x+'] Pilih : ')
@@ -311,10 +318,10 @@ def file():
 				nom = '0'+str(cih)
 				lol.update({str(cih):str(isi)})
 				lol.update({nom:str(isi)})
-				print('['+nom+'] '+isi+' ---> '+str(len(hem))+' Akun'+x)
+				print('['+nom+'] '+isi+' ➳ '+str(len(hem))+' Akun'+x)
 			else:
 				lol.update({str(cih):str(isi)})
-				print('['+str(cih)+'] '+isi+' ---> '+str(len(hem))+' Akun'+x)
+				print('['+str(cih)+'] '+isi+' ➳ '+str(len(hem))+' Akun'+x)
 		teks2 = '# PILIH FILE YG AKAN DI CEK'
 		sol().print(mark(teks2, style='green'))
 		geeh = input(x+'['+p+'f'+x+'] Pilih : ')
@@ -513,7 +520,7 @@ def crack(idf,pwv):
 	bi = random.choice([u,k,kk,b,h,hh])
 	pers = loop*100/len(id2)
 	fff = '%'
-	print('\r%s<-> %s/%s <-> OK:%s <-> CP:%s <-> %s%s%s'%(bi,loop,len(id2),ok,cp,int(pers),str(fff),x), end=' ');sys.stdout.flush()
+	print('\r%s➳ %s/%s ➳ OK:%s ➳ CP:%s ➳ %s%s%s'%(bi,loop,len(id2),ok,cp,int(pers),str(fff),x), end=' ');sys.stdout.flush()
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
 	ses = requests.Session()
