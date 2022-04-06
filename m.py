@@ -58,7 +58,7 @@ def back():
 def _____logo_____():
     ____irpanrunning____(f""" \n{P}                 {____dayharii____}  \n{P}   ╭─────────{___M_K_H___}{P}  {____jamwaktu____}  {___H_K_M___}{P}─────────╮\n{P}   │  © _____________________________   │\n{P}   │   /  _____/\______   \_   _____/   │\n{P}   │  /   \  ___ |    |  _/|    __)     │\n{P}   │  \    \_\  \|    |   \|     \      │\n{P}   │   \______  /|______  /\___  /      │\n{P}   │          \/        \/     \/       │\n{P}   ╰───────────┬────────────┬───────────╯""")
 # BANNER
-def banner():
+#def banner():
 	clear()
 	wel = '# WELCOME TO FACEBOOK WORLD TOOLS 2022'
 	wel2 = mark(wel, style='cyan')
