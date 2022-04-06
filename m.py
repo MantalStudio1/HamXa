@@ -259,7 +259,7 @@ def result():
 			geeh = input(x+'['+p+'⭐'+x+'] SETECT : ')
 			try:geh = lol[geeh]
 			except KeyError:
-				ric = '# OPTION NOT IN MENU''
+				ric = '# OPTION NOT IN MENU'
 				sol().print(mark(ric, style='red'))
 				exit()
 			try:lin = open('OK/'+geh,'r').read()
