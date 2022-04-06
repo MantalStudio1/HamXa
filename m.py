@@ -200,8 +200,7 @@ def result():
 					print('['+nom+'] '+isi+' ➳ '+str(len(hem))+' Akun'+x)
 				else:
 					lol.update({str(cih):str(isi)})
-					print('['+str(cih)+'] '+isi+' ➳ '+str(len(hem))+' 
-Account'+x)
+					print('['+str(cih)+'] '+isi+' ➳ '+str(len(hem))+'Account'+x)
 			gerr2 = '# SELECT RESULTS TO DISPLAY'
 			sol().print(mark(gerr2, style='green'))
 			geeh = input(x+'['+p+'f'+x+'] Pilih : ')
